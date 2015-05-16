@@ -1,7 +1,7 @@
 A basic react app with nested components.
 
-Shows how to nest componets.
-How to use Jquery and React Hooks to fetch data from server.
+Shows how to nest components.
+How to use Jquery and React Life cycle hooks to fetch data from server and bind view.
   
 
 Instructions  For setup -
