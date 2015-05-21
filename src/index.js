@@ -16,8 +16,8 @@ var CommentBox = React.createClass({
     //handles form submitt
     handleCommentSubmit: function (comment) {
 
-        var comments = this.state.data;
-        console.log(this.state.data);
+        var comments = this.state.stateData;
+        console.log(this.state.stateData);
 
         var newComments = comments.concat([comment]);
         //this will call re render Component
@@ -81,7 +81,7 @@ var CommentForm = React.createClass({
         {
             return ;
         }
-        //calling event handler to mutate state in parent component since we cannot set state in child component
+        //calling event handler to mutate state in parent component since we cannot  not set state in child component
         this.props.onCommentSubmit({author : author , text : text});
 
         React.findDOMNode(this.refs.author).value = '';
@@ -124,6 +124,19 @@ React.render(
     document.getElementById('content')
 );
 
+
+
+
+
+
+
+
+
+
+
+
+
+//DATA THROUGH XHR CALLS
 var DynamicCommentBox = React.createClass({
     getInitialState: function() {
     return {data1: []};
@@ -201,7 +214,8 @@ var DynamicCommentForm = React.createClass({
     {
         return ;
     }
-    this.props.onCommentSubmit({author : author , text : text});
+     this.props.onCommentSubmit({author : author , text : text});
+
 
     React.findDOMNode(this.refs.author).value = '';
     React.findDOMNode(this.refs.text).value = '';

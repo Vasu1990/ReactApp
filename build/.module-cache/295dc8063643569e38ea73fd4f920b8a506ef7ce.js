@@ -124,19 +124,6 @@ React.createElement(CommentBox, {data: data}),
     document.getElementById('content')
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-//DATA THROUGH XHR CALLS
 var DynamicCommentBox = React.createClass({displayName: "DynamicCommentBox",
     getInitialState: function() {
     return {data1: []};
